@@ -1,4 +1,4 @@
-import Sentry from "../sentry.edge.config";
+// import Sentry from "../sentry.edge.config";
 
 export const config = {
   runtime: 'edge',
@@ -10,9 +10,9 @@ export default async (req) => {
     const name = url.searchParams.get('name');
 
     if (name) {
-      Sentry.captureException(new Error('Name parameter is not allowed!'));
+      // Sentry.captureException(new Error('Name parameter is not allowed!'));
       return new Response(
-        JSON.stringify({ error: 'Name parameter is not allowed!' }),
+        'Name parameter is not allowed!',
         { status: 400 }
       );
     }
@@ -21,9 +21,9 @@ export default async (req) => {
       status: 200,
     });
   } catch (err) {
-    Sentry.captureException(err);
+    // Sentry.captureException(err);
     return new Response(
-      JSON.stringify({ error: 'An unexpected error occurred.' }),
+      'An unexpected error occurred.',
       { status: 500 }
     );
   }
