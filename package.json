@@ -5,5 +5,9 @@
   "devDependencies": {
     "@types/node": "^17.0.42",
     "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "@sentry/nextjs": "^8.47.0",
+    "@sentry/vercel-edge": "^8.47.0"
   }
 }
