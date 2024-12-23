@@ -1,4 +1,4 @@
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from "@sentry/vercel-edge";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
